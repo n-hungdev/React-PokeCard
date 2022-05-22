@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+//import { useEffect, useRef } from 'react'
+import PokeCard from './components/PokeCard'
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <main id="app">
+      <h1>Pokemon Card, Holo Effect</h1>
 
-export default App;
+      <section class="cards">
+        <PokeCard />
+        <PokeCard className="card pika" />
+        <PokeCard className="card eevee" />
+        <PokeCard className="card mewtwo" />
+      </section>
+
+      {/* <style class="hover" ref={styleRef}></style> */}
+      {/* => JSX <style /> */}
+
+      <section class="demo">
+        <div class="card"></div>
+        <span class="operator">+</span>
+        <div class="card">
+          <span>color-dodge</span>
+        </div>
+        <span class="operator">+</span>
+        <div class="card">
+          <span>color-dodge</span>
+        </div>
+      </section>
+    </main>
+  )
+}
