@@ -17,15 +17,15 @@ export default function App() {
       {/* => JSX <style /> */}
 
       <section class="demo">
-        <div class="card"></div>
+        <PokeCard className="card" />
         <span class="operator">+</span>
-        <div class="card">
+        <PokeCard className="card">
           <span>color-dodge</span>
-        </div>
+        </PokeCard>
         <span class="operator">+</span>
-        <div class="card">
+        <PokeCard className="card">
           <span>color-dodge</span>
-        </div>
+        </PokeCard>
       </section>
     </main>
   )

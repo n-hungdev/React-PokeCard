@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 
-const PokeCard = ({ className = 'card charizard' }) => {
+const PokeCard = ({ className = 'card charizard', children }) => {
   // document.querySelector => useRef
   // https://reactjs.org/docs/hooks-reference.html
   const cardRef = useRef()
@@ -74,8 +74,10 @@ const PokeCard = ({ className = 'card charizard' }) => {
 
   return (
     <>
-      <div className={className} ref={cardRef} />
-      <style class="hover" ref={styleRef} />
+      <div className={className} ref={cardRef}>
+        {children}
+      </div>
+      <style className="hover" ref={styleRef} />
     </>
   )
 }
